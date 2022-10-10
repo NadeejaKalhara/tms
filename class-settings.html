@@ -71,16 +71,9 @@
 		<script src="assets/js/config.js"></script>
 <script src="js/uploader.js"></script>
 		<script>
-			var firebased = require("firebase-admin");
-			const { getStorage } = require('firebase-admin/storage');
-			var serviceAccountd = require(__dirname+"/private/srt.json");
-			   st =  firebase.initializeApp({
-			credential: firebase.credential.cert(serviceAccountd),
-			databaseURL: "https://aduruthuma-default-rtdb.asia-southeast1.firebasedatabase.app"
-			}, 'secondary');
-			;
 
-			const firebaseConfig = {
+
+			const firebaseConfig3 = {
   apiKey: "AIzaSyBqyIlDoEYX4u03OkqpSyPOnVqu23nJwQk",
   authDomain: "aduruthuma-lms.firebaseapp.com",
   databaseURL: "https://aduruthuma-lms-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -91,7 +84,7 @@
 };
 
 
-fi = uploaderjs.initializeApp(firebaseConfig, 'tertiary');
+fi = uploaderjs.initializeApp(firebaseConfig3, 'tertiary');
 
 
 		</script>
@@ -628,6 +621,7 @@ fi = uploaderjs.initializeApp(firebaseConfig, 'tertiary');
 		<script src="assets/vendor/js/bootstrap.js"></script>
 		<script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 		<script src="assets/vendor/js/menu.js"></script>
+		<script src="assets/js/main.js"></script>
 	<script src="js/telenot.js"></script>
 		<script src="js/classet.js"></script>
 		<script src="js/recset.js"></script>
