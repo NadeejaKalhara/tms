@@ -1,7 +1,18 @@
 
 pn = localStorage.getItem("em")
 baseurl = "https://zoom.aduruthuma.ml"
-
+function cn(){
+  var xhr55 = new XMLHttpRequest();
+var url ="https://aduruthuma-server-01-token.onrender.com/tk";
+xhr55.open("POST", url, true);
+xhr55.setRequestHeader("Content-Type", "application/json");
+xhr55.onreadystatechange = function () {
+    if (xhr55.readyState === 4 && xhr55.status === 200) {
+getu(xhr55.responseText)
+    }}
+    var data = JSON.stringify({pn:localStorage.getItem("em")});
+    xhr55.send(data);
+}
 //Auth
 function getu (tk){
     console.log(tk)
@@ -31,7 +42,13 @@ if(location.href.includes("/index")==true){
 
 }
 
-        }};
+        } else{
+          if (xhr533.readyState === 4 && xhr533.status === 401) {
+            cn()
+          }
+        }
+      
+      };
         var data = JSON.stringify();
         xhr533.send(data);
 }
@@ -39,18 +56,7 @@ function acc (d) {
 
    
   
-    function cn(){
-        var xhr55 = new XMLHttpRequest();
-      var url ="https://aduruthuma-server-01-token.onrender.com/tk";
-      xhr55.open("POST", url, true);
-      xhr55.setRequestHeader("Content-Type", "application/json");
-      xhr55.onreadystatechange = function () {
-          if (xhr55.readyState === 4 && xhr55.status === 200) {
-    getu(xhr55.responseText)
-          }}
-          var data = JSON.stringify({pn:localStorage.getItem("em")});
-          xhr55.send(data);
-      }
+
 
     console.log(d)
     if(d!=null){
