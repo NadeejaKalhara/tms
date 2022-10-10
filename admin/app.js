@@ -106,7 +106,6 @@ var handleSignedInUser = function(user) {
   document.getElementById('user-signed-out').style.display = 'none';
   document.getElementById('name').textContent = user.displayName;
   document.getElementById('email').textContent = user.email;
-  localStorage.setItem('nm',user.displayName)
   document.getElementById('phone').textContent = user.phoneNumber;
   ccm(user.phoneNumber)
   if (user.photoURL) {
