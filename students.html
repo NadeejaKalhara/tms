@@ -220,7 +220,7 @@
 				<ul class="menu-inner py-1">
 					<!-- Dashboard -->
 					<li class="menu-item">
-						<a href="index.html" class="menu-link">
+						<a href="/" class="menu-link">
 							<i class="menu-icon tf-icons bx bx-home-circle"></i>
 							<div data-i18n="Analytics">Dashboard</div>
 						</a>
@@ -236,14 +236,14 @@
 					</li>
 					<!-- Class Settings -->
 					<li class="menu-item">
-						<a href="class-settings.html" class="menu-link">
+						<a href="class-settings" class="menu-link">
 							<i class="menu-icon tf-icons bx bx-cog"></i>
 							<div data-i18n="Layouts">Class Settings</div>
 						</a>
 					</li>
 					<!-- Exams -->
 					<li class="menu-item">
-						<a href="exmain.html" class="menu-link">
+						<a href="exmain" class="menu-link">
 							<i class="menu-icon tf-icons bx bx-stopwatch"></i>
 							<div data-i18n="Layouts">Exams</div>
 						</a>
@@ -256,12 +256,12 @@
 						</a>
 						<ul class="menu-sub">
 							<li class="menu-item">
-								<a href="meeting-reports.html" class="menu-link">
+								<a href="meeting-reports" class="menu-link">
 									<div data-i18n="Without menu">Meeting Reports</div>
 								</a>
 							</li>
 							<li class="menu-item">
-								<a href="payment-reports.html" class="menu-link">
+								<a href="payment-reports" class="menu-link">
 									<div data-i18n="Without navbar">Payment Reports</div>
 								</a>
 							</li>
@@ -269,7 +269,7 @@
 					</li>
 					<!-- Students -->
 					<li class="menu-item active">
-						<a href="students.html" class="menu-link">
+						<a href="students" class="menu-link">
 							<i class="menu-icon tf-icons bx bxs-user-account"></i>
 							<div data-i18n="Layouts">Students</div>
 						</a>
@@ -279,13 +279,13 @@
 						<span class="menu-header-text">Settings</span>
 					</li>
 					<li class="menu-item">
-						<a href="edit-profile.html" class="menu-link">
+						<a href="edit-profile" class="menu-link">
 							<i class="menu-icon tf-icons bx bxs-user"></i>
 							<div data-i18n="Analytics">Edit Profile</div>
 						</a>
 					</li>
 					<li class="menu-item">
-						<a href="account-settings.html" class="menu-link">
+						<a href="account-settings" class="menu-link">
 							<i class="menu-icon tf-icons bx bxs-wrench"></i>
 							<div data-i18n="Analytics">Account Settings</div>
 						</a>
@@ -395,13 +395,13 @@
 										<div class="dropdown-divider"></div>
 									</li>
 									<li>
-										<a class="dropdown-item" href="edit-profile.html">
+										<a class="dropdown-item" href="edit-profile">
 										<i class="bx bxs-user me-2"></i>
 										<span class="align-middle">Edit Profile</span>
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="account-settings.html">
+										<a class="dropdown-item" href="account-settings">
 										<i class="bx bxs-cog me-2"></i>
 										<span class="align-middle">Account Settings</span>
 										</a>
@@ -414,8 +414,9 @@
 											<i class="bx bx-power-off me-2"></i>
 											<script>
 												document.getElementById("logout").onclick=function(){
-												  localStorage.clear();
-												  location.replace("https://aduruthumauth.web.app/logout.html");
+													firebase.auth().signOut()
+													  st.auth().signOut()
+													  location.replace("/");
 												};
 											</script>
 											<span class="align-middle">Log Out</span>

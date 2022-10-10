@@ -1,4 +1,5 @@
 var $$ = function( id ) { return document.getElementById( id ); };
+baseurl = "https://zoom.aduruthuma.ml"
 
 
 function authinfo(s){
@@ -45,7 +46,7 @@ var  secret = sec
         }
     bsix = btoa($$("accauthi").value+":"+secret)
     var xhr533 = new XMLHttpRequest();
-    var url2 = "https://zoom.us/oauth/token?grant_type=account_credentials&account_id="+$$("accid").value;
+    var url2 = baseurl+"/oauth/token?grant_type=account_credentials&account_id="+$$("accid").value;
     xhr533.open("POST", url2, true);
     xhr533.setRequestHeader("Content-Type", "application/json");
     
@@ -55,7 +56,7 @@ var  secret = sec
             tkna = JSON.parse(xhr533.responseText)["access_token"]
             firebase.database().ref( "zoomauth/temp/" + pn).set({tk:tkna , tm:Math.floor(new Date().getTime() / 1000)})
             var xhr5331 = new XMLHttpRequest();
-            var url2 = "https://api.zoom.us/v2/users";
+            var url2 = baseurl+"/v2/users";
             xhr5331.open("GET", url2, true);
             xhr5331.setRequestHeader("Content-Type", "application/json");
             
