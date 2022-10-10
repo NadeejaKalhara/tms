@@ -779,7 +779,7 @@ function lptp (){
 
 
   var xhr445232 = new XMLHttpRequest();
-  var url2 = "https://api.zoom.us/v2/report/meetings/"+midzoom+"/participants?page_size=300";
+  var url2 = baseurl+"/v2/report/meetings/"+midzoom+"/participants?page_size=300";
   xhr445232.open("GET", url2, true);
   xhr445232.setRequestHeader("Content-Type", "application/json");
   xhr445232.setRequestHeader("Authorization","Bearer " +tkna );
